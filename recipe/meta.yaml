@@ -14,8 +14,8 @@ build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
-    - olivaw=asimov.olivaw:main
     - locutus=asimov.locutus:cli
+    - olivaw=asimov.olivaw:main
 
 requirements:
   host:
@@ -30,6 +30,9 @@ requirements:
 test:
   imports:
     - asimov
+  commands:
+    - locutus --help
+    - olivaw --help
 
 about:
   home: https://github.com/transientlunatic/asimov
@@ -38,7 +41,12 @@ about:
   license_file: LICENSE.txt
   summary: 'Parameter Estimation automator for gravitational wave analyses.'
   description: |
-    asimov is a python package used to construct automated bots to do various things with parameter estimation jobs for gravitational wave data analysis. There are a number of bits of code which are designed to make writing your own bot easier, and these are importable, but there are also pre-baked bots.
+    asimov is a python package used to construct automated bots to do
+    various things with parameter estimation jobs for gravitational
+    wave data analysis.
+    There are a number of bits of code which are designed to make
+    writing your own bot easier, and these are importable, but there
+    are also pre-baked bots.
   doc_url: https://daniel-williams.docs.ligo.org/supervisor/
   dev_url: https://github.com/transientlunatic/asimov
 
