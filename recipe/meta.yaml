@@ -12,25 +12,39 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - locutus=asimov.locutus:cli
     - olivaw=asimov.olivaw:main
 
 requirements:
   host:
-    - python >=3.6
     - pip
+    - python >=3.6
     - setuptools
     - setuptools_scm
   run:
+    - click
+    - gitpython
+    - ligo-gracedb
+    - liquidpy
+    - networkx
+    - otter-report
     - python >=3.6
-    - setuptools_scm
+    - python-gitlab
+    - python-htcondor
+    - pytz
+    - setuptools
 
 test:
+  requires:
+    - pip
   imports:
     - asimov
   commands:
+    # check requirements
+    - python -m pip check
+    # check entry points
     - locutus --help
     - olivaw --help
 
