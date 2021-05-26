@@ -51,8 +51,7 @@ test:
 about:
   home: https://github.com/transientlunatic/asimov
   license: ISC
-  license_family: OTHER
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: 'Parameter Estimation automator for gravitational wave analyses.'
   description: |
     asimov is a python package used to construct automated bots to do
