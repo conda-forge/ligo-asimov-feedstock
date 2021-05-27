@@ -42,6 +42,7 @@ requirements:
 
 test:
   requires:
+    - git
     - pip
   imports:
     - asimov
