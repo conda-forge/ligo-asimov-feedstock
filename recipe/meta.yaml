@@ -15,7 +15,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - locutus=asimov.locutus:cli
-    - olivaw=asimov.olivaw:main
+    - olivaw=asimov.olivaw:olivaw
 
 requirements:
   host:
@@ -26,15 +26,19 @@ requirements:
   run:
     - click
     - gitpython
+    - gwpy
     - ligo-gracedb
     - liquidpy
+    - lscsoft-glue
     - networkx
+    - numpy
     - otter-report
     - python >=3.6
     - python-gitlab
     - python-htcondor
     - pytz
-    - setuptools
+    - pyyaml
+    - requests
 
 test:
   requires:
