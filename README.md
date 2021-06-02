@@ -1,7 +1,7 @@
 About ligo-asimov
 =================
 
-Home: https://github.com/transientlunatic/asimov
+Home: https://asimov.docs.ligo.org/asimov/
 
 Package license: ISC
 
@@ -9,11 +9,16 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ligo-asimov-fee
 
 Summary: Parameter Estimation automator for gravitational wave analyses.
 
-Development: https://github.com/transientlunatic/asimov
+Development: https://git.ligo.org/asimov/asimov.git
 
-Documentation: https://daniel-williams.docs.ligo.org/supervisor/
+Documentation: https://asimov.docs.ligo.org/asimov/
 
-asimov is a python package used to construct automated bots to do various things with parameter estimation jobs for gravitational wave data analysis. There are a number of bits of code which are designed to make writing your own bot easier, and these are importable, but there are also pre-baked bots.
+asimov is a python package used to construct automated bots to do
+various things with parameter estimation jobs for gravitational
+wave data analysis.
+There are a number of bits of code which are designed to make
+writing your own bot easier, and these are importable, but there
+are also pre-baked bots.
 
 
 Current build status
@@ -43,6 +48,7 @@ Installing `ligo-asimov` from the `conda-forge` channel can be achieved by addin
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `ligo-asimov` can be installed with:
@@ -113,9 +119,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
