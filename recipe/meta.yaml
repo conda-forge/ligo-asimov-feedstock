@@ -1,5 +1,5 @@
 {% set name = "ligo-asimov" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 80f2cadf41df67016fd280ba59140b4a780fab8ebb065a4c3039ca222d8a3c6c
+  sha256: 4a09c3760cd3c05e2caf7d227fda35088804abf310a7c98893c0bfa3bb1191ba
 
 build:
   noarch: python
@@ -59,7 +59,7 @@ about:
   dev_url: https://git.ligo.org/asimov/asimov.git
   license: ISC
   license_file: LICENSE
-  summary: 'Parameter Estimation automator for gravitational wave analyses.'
+  summary: Parameter Estimation automator for gravitational wave analyses.
   description: |
     asimov is a python package used to construct automated bots to do
     various things with parameter estimation jobs for gravitational
