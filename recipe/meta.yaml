@@ -1,5 +1,5 @@
 {% set name = "ligo-asimov" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4a09c3760cd3c05e2caf7d227fda35088804abf310a7c98893c0bfa3bb1191ba
+  sha256: 4702de303331e9734ab520ce80d06388b8bfd49e39b828e037c98a2fb303a35d
 
 build:
   noarch: python
