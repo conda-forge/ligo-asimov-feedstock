@@ -1,4 +1,4 @@
-{% set name = "ligo-asimov" %}
+{% set name = "asimov" %}
 {% set version = "0.3.4" %}
 
 package:
