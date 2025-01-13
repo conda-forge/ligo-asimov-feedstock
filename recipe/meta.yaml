@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4702de303331e9734ab520ce80d06388b8bfd49e39b828e037c98a2fb303a35d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - locutus=asimov.locutus:cli
@@ -20,7 +20,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
   run:
@@ -33,7 +33,7 @@ requirements:
     - networkx
     - numpy
     - otter-report
-    - python >=3.6
+    - python >={{ python_min }}
     - python-gitlab
     - python-htcondor
     - pytz
@@ -44,6 +44,7 @@ test:
   requires:
     - git
     - pip
+    - python {{ python_min }}
   imports:
     - asimov
   commands:
